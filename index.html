@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleguita's Adventure</title>
+    <link rel="icon" type="image/x-icon" href="./assets/robot-izquierda.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="./eventListeners.js" defer></script>
+    <script src="./FinalGoal.js" defer></script>
+    <script src="./Countdown.js" defer></script>
+    <script src="./RespawnFloor.js" defer></script>
+    <script src="./Player.js" defer></script>
+    <script src="./Platform.js" defer></script>
+    <script src="./RespawnFloor.js" defer></script>
+    <script src="./iniciarJuego.js" defer></script>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <audio src='./assets/music.m4a' loop autoplay></audio>
+    
+    <div id="container">
+        <div class="countdown">
+            <h1 id="timer"></h1>
+        </div>
+    </div>
+        
+    <div id="conEnt"></div>
+    <div class="modal">
+        <h1 id="result"></h1>
+        <button id="boton" onclick="iniciarJuego()" class="btn">Start Game</button>
+    </div>
+</body>
+</html>

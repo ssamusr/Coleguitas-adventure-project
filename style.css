@@ -1,0 +1,194 @@
+body {
+    align-items: center;
+    background-color: grey;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#container {
+    background-image: url('./assets/fondo.webp');
+    background-repeat: repeat;
+    background-size: auto;
+    box-shadow: -21px 35px 54px -8px rgba(0, 0, 0, 0.53);
+    display: none;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    height: 576px;
+    width: 1024px;
+}
+
+#container::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#player {
+    background-image: url('./assets/robot-derecha2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 50px;
+    width: 30px;
+}
+
+.platform {
+    background-image: url(./assets/plataforma.webp);
+    background-size: contain;
+    height: 50px;
+    position: absolute;
+    width: 200px;
+    z-index: 1;
+
+}
+
+.platform::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.150);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.platform::before {
+    content: "";
+    background-image: url('./assets/hojas.png');
+    height: 15px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+
+}
+
+.finalGoal {
+    background-image: url(./assets/bidon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+
+}
+
+.countdown {
+    position: absolute;
+    top: -70px;
+    display: block;
+    z-index: 2;
+    border-top: 15px solid transparent;
+    border-image: url('./assets/hojas.png') 30 round;
+    width: 280px;
+}
+
+.countdown::before,
+.countdown::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15px; /* Ancho del borde lateral */
+    background-repeat: repeat-y;
+}
+
+.countdown::before {
+    left: 0;
+    background-image: url('./assets/hojas-izquierda.png');
+}
+
+.countdown::after {
+    right: 0;
+    top: -6px;
+    background-image: url('./assets/hojas-derecha.png');
+}
+
+#timer {
+    font-size: 3rem;
+    display: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#conEnt {
+    background:
+        url('./assets/robot-title.webp') bottom/cover no-repeat,
+        url('./assets/titulo.webp') top/cover no-repeat;
+    background-size: auto;
+    height: 576px;
+    position: relative;
+    width: 1024px;
+    text-align: center;
+    background-color: #483d8b;
+    display: block;
+}
+
+.modal {
+    position: absolute;
+    width: 24rem;
+    height: 13rem;
+    margin-top: 200px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+/*      background-color: rgb(209, 209, 209);
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.150);
+    border-radius: 12px;  */
+}
+
+#result {
+    display: block;
+    font-size: 3rem;
+}
+
+#boton {
+/*     position: absolute; */
+    padding: 0.625em 1.25em;
+    background-color: #4CAF50;
+    color: white;
+    border: 4px solid black;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-align: center;
+/*     margin-top: 300px; */
+    display: block;
+    font-family: "Pixelify Sans", sans-serif;
+    margin-bottom: 1.6rem;
+}
+
+#boton:hover {
+    background-color: #62e266;
+}
+
+.respawnFloor {
+    background-image: url(./assets/waves.png);
+    background-size: contain;
+    height: 50px;
+    position: absolute;
+    width: 200px;
+}
+
+.respawnTrap {
+    background-image: url(./assets/flor.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
