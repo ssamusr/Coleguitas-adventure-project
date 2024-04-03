@@ -20,7 +20,7 @@ It is a platform game where players control a character who must jump with preci
 
 ## Try the Game
 
-You can try the game at the following link: [Play the Game](https://ssamusr.github.io/Plataformer-game/)
+You can try the game at the following link: [Play the Game](https://ssamusr.github.io/Coleguitas-adventure-project/)
 
 ## Clone the Project
 
